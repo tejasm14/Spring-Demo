@@ -5,14 +5,14 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MyFirstService {
+public class MyThirdService {
 
-    private final MyFirstClass myFirstClass;
+    private MyFirstClass myFirstClass;
 
-    //@Autowired
-    public MyFirstService(/*@Qualifier("bean2") */MyFirstClass myFirstClass) {
+    @Autowired
+    public void injectDependency(@Qualifier("myThirdClass") MyFirstClass myFirstClass) {
         this.myFirstClass = myFirstClass;
-    } // this is called constructor dependency injection. This Constructor DI can be run without @Autowired annotation
+    }
 
     public String tellAStory() {
         return "Dependency injection is saying : "+myFirstClass.sayHello();

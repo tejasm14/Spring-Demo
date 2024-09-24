@@ -15,8 +15,18 @@ public class ExampleApplication {
 		//MyFirstClass myFirstClass = ctx.getBean("myBean",MyFirstClass.class);//when we give name then by default spring will consider the method whic we have created for the Bean
 		//System.out.println(myFirstClass.sayHello());
 
-		MyFirstService myFirstService = ctx.getBean(MyFirstService.class);
-		System.out.println(myFirstService.tellAStory());
+		//MyFirstService myFirstService = ctx.getBean(MyFirstService.class);
+		//System.out.println(myFirstService.tellAStory());
+
+		//MySecondService mySecondService = ctx.getBean(MySecondService.class);
+		//System.out.println(mySecondService.tellAStory());
+
+		MyThirdService myThirdService = ctx.getBean(MyThirdService.class);
+		System.out.println(myThirdService.tellAStory());
+
+
+
+
 	}
 
 }
